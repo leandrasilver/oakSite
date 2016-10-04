@@ -1,0 +1,434 @@
+/*Normalize styles*/
+
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/*General Styles*/
+
+html {
+	font-size: 62.5%;
+}
+
+img{
+	max-width:100%;
+}
+
+.wrapper {
+	max-width:1000px;
+	width:90%;
+	margin:0 auto;
+}
+
+.flexParent {
+	display:flex;
+  	justify-content: space-between;
+  	align-items:baseline;
+}
+
+h1, h2, h3, h4{
+	text-transform:uppercase;
+}
+
+h1{
+	letter-spacing: 0.8rem;
+	font-family:'Raleway', sans-serif;
+	font-size:3rem;
+}
+
+h2{
+	font-family: 'Ubuntu', sans-serif;
+	letter-spacing: 0.3rem;
+	font-size:1.5rem;
+}
+
+h3 {
+	font-family: 'Ubuntu', sans-serif;
+	letter-spacing: 0.3rem;
+}
+
+h4{
+	font-family: 'Ubuntu', sans-serif;
+	letter-spacing: 0.1rem;
+	font-size:1.2rem;
+	line-height: 1.5;
+	font-weight: 300;
+}
+
+p{
+	line-height: 1.5;
+	font-size:1rem;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+section.history, section.whyUs, section.ourWork, section.contact, footer{
+	margin-top: 5%;
+}
+
+/*JS classes*/
+
+.hide {
+	display: none;
+}
+
+.jscyan {
+	color: rgba(0, 255, 204,1);
+}
+
+/*Navigation*/
+
+nav{
+	position:fixed;
+	width:100%;
+	padding:2%;
+	background-color: white;
+	top:0;
+	z-index:1;
+}
+	nav div.hamburger:hover {
+		color: rgba(0, 255, 204,1);
+	}
+
+	nav div.hamburger h2 {
+		padding-right: 10%;
+		font-size:1.5rem;
+		letter-spacing:0rem;
+	}
+
+/*Header*/
+
+header{
+	padding-top:5%;
+	position: relative;
+}
+
+	header .headerTitle{
+		position:absolute;
+		top:50%;
+		left:10%;
+		margin-bottom:3%;
+		width:100%;
+	}
+
+		header span {
+			background-color: rgba(0, 255, 204,1);
+			display: inline-block;
+			padding:10px;
+			font-weight: 100;
+		}
+
+		header h1 {
+			line-height: 3rem;
+			padding-bottom: 1%;
+		}
+
+		header h2{
+			font-weight:300;
+			letter-spacing: 0;
+			word-spacing: 0.5rem;
+			font-size:2rem;
+		}
+
+/*History */
+
+section .historyContent {
+	padding-right:10%;
+	flex: 1 1 50%;
+	align-self: center;
+}
+
+section .historyImage {
+	flex:1 1 30%;
+}
+
+/*Why Us*/ 
+
+section.whyUs .whyUsItem {
+	padding-right:2%;
+	padding-top:5%;
+}
+
+	section.whyUs .whyUsItem img:nth-child(2) {
+		display:block;
+		padding-top:3%;
+	}
+
+/*Our Work Section*/
+
+section.ourWork div.gallery{
+	display:flex;
+	flex-wrap: wrap;
+	margin-top: 3%;
+}
+
+.filters {
+	display: flex;
+	justify-content: flex-start;
+	align-content: center;
+}
+
+	.filters div {
+		font-size: 1.3rem;
+		margin:5% 2% 0 2%;
+	}
+
+		.filters div p{
+			font-size: 1.3rem;
+		}
+
+	.filters .blueHamburger {
+		background-color: rgba(0, 255, 204,1);
+		display:flex;
+		justify-content: center;
+		align-items: center;
+		padding-left:10px;
+		padding-right:10px;
+		margin-left:0;
+	}
+
+	.all:hover, .branding:hover, .webDesign:hover, .graphicDesign:hover{
+		color: rgba(0, 255, 204,1);
+		cursor: pointer;
+	}
+
+figure{
+	position:relative;
+	display:inline-block;
+	margin-bottom:15px;
+	margin-right:15px;
+	flex:1 0 30%;
+	min-width:250px;
+}
+
+	figure img:first-child {
+	    display: block;
+	    width: 100%;
+	}
+
+	figcaption {
+		display: none;
+		position: absolute;
+		top:0;
+		left:0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 255, 204,0.7);
+		border: 3px solid black;
+	}
+
+		figcaption h2, figcaption h3, figcaption i.fa-heart-o, figcaption img.plus {
+			position:absolute;
+			margin:0;
+		}
+
+		figcaption h2, figcaption h3{
+			margin-left:5%;
+			text-align: left;
+		}
+
+		figcaption h2{
+			bottom:12%;		
+			font-weight:bold;
+		}
+
+		figcaption h3{
+			bottom:6%;
+			font-weight:normal;
+		}
+
+		figcaption i.fa-heart-o {
+			top: 5%;
+			left:5%;
+		}
+
+		figcaption img.plus {
+			top: 40%;
+			left:42%;
+		}
+
+	figure:hover figcaption{
+		display:block ;
+	}
+
+section.ourWork .loading {
+	text-align:center;
+	margin-top: 5%;
+}
+
+/*Contact and Form*/ 
+
+section.contact {
+	justify-content: center;
+	align-items: center;
+}
+
+	section.contact .contactContent{
+		background-color:  rgba(0, 255, 204,0.5);
+		flex:1 1 50%;
+		height:250px;
+		line-height: 3rem;
+	}
+
+		.contactContent h2 {
+			align-self: center;
+			font-weight: 200;
+			padding:15%;
+		}
+
+	section.contact .contactForm{
+		flex:1 1 50%;
+		position:relative;
+		height:250px;
+		background-image: url(../images/clock.jpg);
+		background-position: center;
+		background-size: cover;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+		.contactForm .formWrapper {
+			background-color: white;
+			width:80%;
+			height: 70%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+			section.contact form{
+				width: 50%;
+				height: 50%;
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+
+					input[type=email] {
+						display: block;
+						padding:8% 40% 8% 5%;
+						font-size: 1.2rem;
+						text-transform: uppercase;
+						margin-bottom:10%;
+						border: 1px solid rgba(33,33,33,0.2);
+					}
+
+					input[type=submit] {
+						display: block;
+						border:none;
+						color: white;
+						font-weight: 400;
+						letter-spacing: 0.3rem;
+						text-transform: uppercase;
+						font-size: 1.3rem;
+						padding:5%;
+						background-color:  rgba(0, 255, 204,0.8);
+						box-shadow: 1px 1px 2px grey;
+					}
+
+					input[type=submit]:active {
+					    border: 3px double rgba(255, 255, 255, 0.9);
+					}
+
+/*Footer*/
+
+footer {
+	background-color: rgba(33,33,33,0.1);
+	margin-bottom:0;
+	padding-bottom:5%;
+}
+
+	footer p {
+	 	color: rgba(35,35,35,0.8);
+	 	font-size: 1.2rem;
+	}
+
+	.footerItem {
+		flex-basis: 15%;
+		padding-top: 5%;
+	}	
+
+	.footer2Item{
+		flex-basis: 70%;
+		text-align: center;
+	}
+		.footer2Item .copyright p {
+			font-size: 1.5rem;
+			text-transform: uppercase;
+		}
+
+		.footer2Item .social i {
+			padding:2%;
+			transition:all 0.3s ease-in;
+		}
+			.footer2Item .social i:hover {
+				color: rgba(0,255,204,1);
+				transform: scale(1.8,1.8);
+			}
+
+
+/*Breakpoints*/
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+	header .headerTitle{
+		top:40%;
+		left:5%;
+		margin-bottom:1%;
+	}
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+	h1{
+		font-size: 2rem;
+	}
+
+	h2{
+		font-size: 1.5rem;
+	}
+
+	.flexParent {
+		display:block;
+	}
+
+	figure.img:first-chid{
+		width:100%;
+	}
+
+	nav div.wrapper, nav .hamburger {
+		display:flex;
+	}
+
+	.footerItem {
+		text-align: center;
+	}
+
+	section.contact .contactContent{
+		height:150px;
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 370px) {
+	header h1{
+		font-size: 1.5rem;
+	}
+
+	 header h2{
+		font-size: 1rem;
+	}
+
+	header span {
+		padding:5px;
+	}
+}
