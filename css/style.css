@@ -102,6 +102,33 @@ nav{
 		letter-spacing:0rem;
 	}
 
+.mainNav{
+	list-style:none;
+	font-size:1.2rem;
+	display: none;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	padding:0;
+	margin:0 auto;
+}
+
+.mainNav li {
+	display: inline-block;
+}
+
+.mainNav a {
+	padding:20px;
+}
+
+.mainNav li:hover, .mainNav li:focus {				
+	color: rgba(0,255,204,1);
+}
+
+.showMenu {
+	display: block;
+	opacity:1;
+}
+
 /*Header*/
 
 header{
@@ -387,6 +414,16 @@ footer {
 }
 
 /* Landscape phones and down */
+@media (max-width: 740px) {
+	.mainNav li {
+		display:block;
+		background-color: white;
+		margin:20px;
+		width: 100%;
+		text-align: center;
+	}
+}
+
 @media (max-width: 480px) {
 
 	h1{

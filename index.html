@@ -18,12 +18,18 @@ font-family: 'Ubuntu', sans-serif; -->
 			<div>
 				<img src="assets/logo.png">
 			</div>
+			<ul class="mainNav">
+				<li><a href="#history">Our History</a></li>
+				<li><a href="#choose">Why Choose Us</a></li>
+				<li><a href="#work">Our Work</a></li>
+				<li><a href="#contact">Contact Us</a></li>
+			</ul>
 			<div class="flexParent hamburger">
 				<h2>Menu</h2>
-				<img src="assets/hamburger.png" alt="menu hamburger">
+				<i class="fa fa-bars fa-2x" id="menuIcon"></i>
 			</div>
 		</div>
-	</nav>
+	</nav>  
 
 	<!-- Header -->
 	<header class=" wrapper">
@@ -37,7 +43,7 @@ font-family: 'Ubuntu', sans-serif; -->
 	</header>
 
 	<!-- History -->
-	<section class=" history wrapper">
+	<section class=" history wrapper" id="history">
 		<div class="flexParent">
 			<div class="historyContent">
 				<h2> History of Agency</h2>
@@ -52,7 +58,7 @@ font-family: 'Ubuntu', sans-serif; -->
 	</section> <!-- /History -->
 
 	<!-- Why Choose Us -->
-	<section class="whyUs wrapper">
+	<section class="whyUs wrapper" id="choose">
 		<div>
 			<h2> Why Choose Us </h2>
 			<img src="assets/line.png" aria-hidden="true">
@@ -81,7 +87,7 @@ font-family: 'Ubuntu', sans-serif; -->
 	</section> <!-- /whyUs -->
 
 	<!-- Our Work -->
-	<section class="ourWork wrapper">
+	<section class="ourWork wrapper" id="work">
 		<div>
 			<h2> Our Work </h2>
 			<img src="assets/line.png" aria-hidden="true">
@@ -209,7 +215,7 @@ font-family: 'Ubuntu', sans-serif; -->
 	</section><!-- /contact -->
 
 	<footer>
-		<div class="wrapper flexParent">
+		<div class="wrapper flexParent" id="contact">
 			<div class="footerItem">
 				<h2> <strong> O.A.K Theme </strong></h2>
 				<p> City 35 AM</p>
@@ -237,9 +243,17 @@ font-family: 'Ubuntu', sans-serif; -->
 			</div>
 		<div> <!-- /wrapper -->
 	</footer>
+
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+	<!-- SmoothScroll -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.7.2/jquery.smooth-scroll.min.js"></script>
+
 	<script>
 		$(function() {
+
+			$('a').smoothScroll();
+
 		    $('.all').click(function(){
 		    	$('.accesories, .branding, .webDesign, .graphicDesign').removeClass('jscyan');
 				$('.gallery figure').removeClass('hide');
@@ -266,6 +280,20 @@ font-family: 'Ubuntu', sans-serif; -->
 				$('.shoes, .accesories').addClass('hide');
 				$('.graphicDesign').addClass('jscyan')
 			})
+
+			// When clicking on the menu icon, show the menu and switch between hamburger and x icon.
+
+			$('#menuIcon').on('click', function(){
+				$('.mainNav').toggleClass('showMenu');
+				$(this).toggleClass('fa-times fa-bars');
+			})
+
+			// when clicking list item , show menu, and switch between x and hamburger menu
+			$('.mainNav li').on('click', function(){
+				$('.mainNav').removeClass('showMenu');
+				$('#menuIcon').toggleClass('fa-times fa-bars');
+			})
+		    
 		});
 	</script>
 </body>
